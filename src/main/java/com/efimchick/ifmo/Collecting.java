@@ -3,7 +3,6 @@ package com.efimchick.ifmo;
 
 import com.efimchick.ifmo.util.CourseResult;
 import com.efimchick.ifmo.util.Person;
-
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Comparator;
@@ -135,7 +134,7 @@ public class Collecting {
                         .map(CourseResult::getPerson)
                         .map(t -> t.getLastName() + " " + t.getFirstName())
                         .mapToInt(String::length)
-                        .boxed())  // Convert IntStream to Stream<Integer>
+                        .boxed())
                 .max(Integer::compareTo)
                 .orElse(0);
 
